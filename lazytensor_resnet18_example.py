@@ -18,6 +18,9 @@ PYTHONPATH. Then, run
 
 The output of this example can be found in
     `lazytensor_resnet18_example_output.txt`
+
+Most of the code in this example was barrowed from
+    https://github.com/llvm/torch-mlir/blob/main/examples/torchscript_resnet18_e2e.py
 """
 
 from torchvision import models, transforms
