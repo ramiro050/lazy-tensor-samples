@@ -1,126 +1,121 @@
 Loading image...
 Running model on image...
+/home/ramiroleal/pytorch/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Metrics Report:
 Metric: DeviceLockWait
-  TotalSamples: 323
-  Accumulator: 634.741us
-  ValueRate: 005.274us / second
-  Rate: 2.68401 / second
-  Percentiles: 1%=000.362us; 5%=000.613us; 10%=000.817us; 20%=000.964us; 50%=001.460us; 80%=002.496us; 90%=002.808us; 95%=003.377us; 99%=005.300us
+  TotalSamples: 691
+  Accumulator: 001ms409.378us
+  ValueRate: 000.287us / second
+  Rate: 0.140738 / second
+  Percentiles: 1%=000.483us; 5%=000.525us; 10%=000.557us; 20%=000.652us; 50%=000.997us; 80%=001.963us; 90%=002.701us; 95%=003.639us; 99%=037.003us
 Metric: IrValueTensorToDataHandle
-  TotalSamples: 660
-  Accumulator: 002ms297.542us
-  ValueRate: 019.002us / second
-  Rate: 5.45853 / second
-  Percentiles: 1%=001.420us; 5%=001.565us; 10%=001.607us; 20%=001.662us; 50%=002.156us; 80%=003.761us; 90%=005.027us; 95%=008.515us; 99%=023.135us
+  TotalSamples: 1103
+  Accumulator: 010ms269.579us
+  ValueRate: 002.039us / second
+  Rate: 0.208538 / second
+  Percentiles: 1%=001.375us; 5%=001.566us; 10%=001.621us; 20%=001.778us; 50%=004.410us; 80%=014.229us; 90%=025.045us; 95%=029.078us; 99%=078.410us
 Metric: TensorsGraphSize
-  TotalSamples: 304
-  Accumulator: 4144.00
-  ValueRate: 34.44 / second
-  Rate: 2.52613 / second
-  Percentiles: 1%=1.00; 5%=1.00; 10%=1.00; 20%=1.00; 50%=1.00; 80%=20.00; 90%=24.00; 95%=25.00; 99%=177.00
+  TotalSamples: 691
+  Accumulator: 34659.00
+  ValueRate: 7.06 / second
+  Rate: 0.140738 / second
+  Percentiles: 1%=1.00; 5%=1.00; 10%=1.00; 20%=1.00; 50%=2.00; 80%=25.00; 90%=208.00; 95%=208.00; 99%=940.00
 Counter: CachedCompile
-  Value: 170
+  Value: 329
 Counter: CreateLtcTensor
-  Value: 1141
+  Value: 3197
 Counter: DestroyLtcTensor
-  Value: 786
+  Value: 2885
 Counter: DeviceDataCacheMiss
-  Value: 3
+  Value: 89
 Counter: UncachedCompile
-  Value: 134
+  Value: 362
+Counter: aten::_index_put_impl_
+  Value: 8
 Counter: aten::arange.start_out
-  Value: 11
-Counter: aten::bitwise_and.Tensor_out
   Value: 16
-Counter: aten::clamp.out
-  Value: 6
-Counter: aten::convolution_overrideable
-  Value: 76
 Counter: aten::exp.out
+  Value: 12
+Counter: aten::floor.out
   Value: 2
 Counter: aten::index.Tensor
-  Value: 4
+  Value: 361
+Counter: aten::log2.out
+  Value: 2
 Counter: aten::max_pool2d_with_indices
   Value: 2
 Counter: aten::nonzero
-  Value: 1
-Counter: aten::rsqrt.out
-  Value: 53
-Counter: aten::sigmoid.out
-  Value: 1
-Counter: aten::topk.values
-  Value: 1
+  Value: 93
 Counter: aten::upsample_nearest2d.out
   Value: 3
 Counter: lazy::_copy_from
-  Value: 1034
+  Value: 2338
 Counter: lazy::_copy_from_and_resize
-  Value: 94
+  Value: 43
+Counter: lazy::_softmax
+  Value: 1
 Counter: lazy::add
-  Value: 87
-Counter: lazy::cat
-  Value: 2
-Counter: lazy::div
+  Value: 143
+Counter: lazy::addmm
   Value: 4
+Counter: lazy::bitwise_and
+  Value: 20
+Counter: lazy::cat
+  Value: 19
+Counter: lazy::clamp
+  Value: 38
+Counter: lazy::convolution_overrideable
+  Value: 82
+Counter: lazy::div
+  Value: 26
+Counter: lazy::eq
+  Value: 8
 Counter: lazy::expand
-  Value: 12
+  Value: 20
+Counter: lazy::fill_
+  Value: 82
 Counter: lazy::ge
-  Value: 12
+  Value: 20
+Counter: lazy::gt
+  Value: 1
 Counter: lazy::lt
   Value: 10
 Counter: lazy::mul
-  Value: 169
+  Value: 221
 Counter: lazy::permute
-  Value: 2
+  Value: 10
 Counter: lazy::relu
-  Value: 5
+  Value: 12
 Counter: lazy::relu_
   Value: 49
+Counter: lazy::rsqrt
+  Value: 53
 Counter: lazy::select
-  Value: 36
+  Value: 278
+Counter: lazy::sigmoid
+  Value: 6
 Counter: lazy::slice
-  Value: 37
+  Value: 394
+Counter: lazy::sqrt
+  Value: 2
 Counter: lazy::squeeze
-  Value: 1
+  Value: 93
 Counter: lazy::stack
   Value: 5
 Counter: lazy::sub
-  Value: 61
+  Value: 105
+Counter: lazy::t
+  Value: 4
+Counter: lazy::topk
+  Value: 6
 Counter: lazy::unsqueeze
-  Value: 7
+  Value: 42
 Counter: lazy::view
-  Value: 150
+  Value: 193
 Counter: lazy::zero_
-  Value: 1
-/home/pytorch/torch/functional.py:445: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  ../aten/src/ATen/native/TensorShape.cpp:2157.)
-  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
-Traceback (most recent call last):
-  File "lazytensor_maskrcnn_example.py", line 66, in <module>
-    main()
-  File "lazytensor_maskrcnn_example.py", line 59, in main
-    coco_demo.run_on_opencv_image(image)
-  File "/home/maskrcnn-benchmark/demo/predictor.py", line 209, in run_on_opencv_image
-    predictions = self.compute_prediction(image)
-  File "/home/maskrcnn-benchmark/demo/predictor.py", line 242, in compute_prediction
-    predictions = self.model(image_list)
-  File "/home/pytorch/torch/nn/modules/module.py", line 1106, in _call_impl
-    return forward_call(*input, **kwargs)
-  File "/home/maskrcnn-benchmark/maskrcnn_benchmark/modeling/detector/generalized_rcnn.py", line 50, in forward
-    proposals, proposal_losses = self.rpn(images, features, targets)
-  File "/home/pytorch/torch/nn/modules/module.py", line 1106, in _call_impl
-    return forward_call(*input, **kwargs)
-  File "/home/maskrcnn-benchmark/maskrcnn_benchmark/modeling/rpn/rpn.py", line 161, in forward
-    return self._forward_test(anchors, objectness, rpn_box_regression)
-  File "/home/maskrcnn-benchmark/maskrcnn_benchmark/modeling/rpn/rpn.py", line 187, in _forward_test
-    boxes = self.box_selector_test(anchors, objectness, rpn_box_regression)
-  File "/home/pytorch/torch/nn/modules/module.py", line 1106, in _call_impl
-    return forward_call(*input, **kwargs)
-  File "/home/maskrcnn-benchmark/maskrcnn_benchmark/modeling/rpn/inference.py", line 140, in forward
-    sampled_boxes.append(self.forward_for_single_feature_map(a, o, b))
-  File "/home/maskrcnn-benchmark/maskrcnn_benchmark/modeling/rpn/inference.py", line 116, in forward_for_single_feature_map
-    boxlist = boxlist_nms(
-  File "/home/maskrcnn-benchmark/maskrcnn_benchmark/structures/boxlist_ops.py", line 28, in boxlist_nms
-    keep = _box_nms(boxes, score, nms_thresh)
-  File "/home/lazy-tensor-venv/lib/python3.8/site-packages/apex-0.1-py3.8-linux-x86_64.egg/apex/amp/amp.py", line 22, in wrapper
-    return orig_fn(*args, **kwargs)
-RuntimeError: Cannot access data pointer of Tensor that doesn't have storage
+  Value: 8
+Counter: torchvision::nms
+  Value: 85
+Counter: torchvision::roi_align
+  Value: 8
