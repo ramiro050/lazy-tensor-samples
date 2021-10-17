@@ -23,15 +23,6 @@ where `img_path` is the path to the sample image to run the model on.
 
 The output of this example can be found in
     `lazytensor_maskrcnn_example_output.txt`
-
-TODO: this example currently crashes before finishing. In order to
-    get the metrics output in the `...output.txt`, the line
-
-        print(metrics.metrics_report())
-
-    was added right before the call to `_box_nms` is made in `boxlist_nms` in
-
-        maskrcnn_benchmark/structures/boxlist_ops.py
 """
 import argparse
 import pathlib
@@ -43,7 +34,6 @@ from lazy_tensor_core.debug import metrics
 import cv2
 
 ltc._LAZYC._ltc_init_ts_backend()
-CONFIG_FILE = "../configs/caffe2/e2e_mask_rcnn_R_50_FPN_1x_caffe2.yaml"
 
 
 def setup_argparse() -> argparse.ArgumentParser:
@@ -51,6 +41,9 @@ def setup_argparse() -> argparse.ArgumentParser:
         description='Run MaskRCNN on Lazy Tensor Core')
     parser.add_argument('img_path', type=pathlib.Path,
                         help='Path to image to run model on')
+    parser.add_argument('maskrcnn_path', type=pathlib.Path,
+                        help='Path to `maskrcnn-benchmark` repo. ' \
+                        'Used to get configuration information.')
     return parser
 
 
@@ -60,9 +53,11 @@ def main():
     print('Loading image...')
     image = cv2.imread(str(args.img_path))
 
-    cfg.merge_from_file(CONFIG_FILE)
+    rel_config_file = 'configs/caffe2/e2e_mask_rcnn_R_50_FPN_1x_caffe2.yaml'
+    config_file = args.maskrcnn_path / rel_config_file
+    cfg.merge_from_file(config_file)
     cfg.merge_from_list(["MODEL.DEVICE", "lazy"])
-    coco_demo = COCODemo(cfg, min_image_size=200,
+    coco_demo = COCODemo(cfg, min_image_size=50,
                          confidence_threshold=0.7)
 
     print('Running model on image...')
