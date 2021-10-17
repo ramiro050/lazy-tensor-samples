@@ -2,29 +2,27 @@ Loading image...
 Loading labels...
 Running resnet18.forward...
 Top 3 predictions:
-[('Labrador retriever', 70.66297912597656), ('golden retriever', 4.956643104553223), ('Chesapeake Bay retriever', 4.195682048797607)]
+[('Labrador retriever', 70.66316986083984), ('golden retriever', 4.95660400390625), ('Chesapeake Bay retriever', 4.195657253265381)]
 
 Metrics report:
 Metric: DeviceLockWait
-  TotalSamples: 66
-  Accumulator: 218.811us
-  ValueRate: 061.867us / second
-  Rate: 18.6611 / second
-  Percentiles: 1%=000.484us; 5%=000.584us; 10%=000.801us; 20%=001.066us; 50%=002.136us; 80%=003.107us; 90%=003.989us; 95%=004.293us; 99%=077.734us
+  TotalSamples: 9
+  Accumulator: 014.580us
+  ValueRate: 054.605us / second
+  Rate: 33.7068 / second
+  Percentiles: 1%=000.838us; 5%=000.838us; 10%=000.838us; 20%=000.855us; 50%=001.200us; 80%=002.478us; 90%=003.811us; 95%=003.811us; 99%=003.811us
 Metric: IrValueTensorToDataHandle
-  TotalSamples: 128
-  Accumulator: 882.355us
-  ValueRate: 216.588us / second
-  Rate: 31.4196 / second
-  Percentiles: 1%=001.606us; 5%=001.661us; 10%=001.734us; 20%=001.851us; 50%=002.162us; 80%=005.814us; 90%=018.903us; 95%=025.585us; 99%=029.634us
+  TotalSamples: 108
+  Accumulator: 358.414us
+  ValueRate: 450.749us / second
+  Rate: 135.823 / second
+  Percentiles: 1%=001.606us; 5%=001.638us; 10%=001.718us; 20%=001.824us; 50%=002.054us; 80%=002.625us; 90%=003.097us; 95%=005.973us; 99%=023.108us
 Metric: TensorsGraphSize
-  TotalSamples: 66
-  Accumulator: 421.00
-  ValueRate: 119.05 / second
-  Rate: 18.6632 / second
-  Percentiles: 1%=1.00; 5%=1.00; 10%=1.00; 20%=1.00; 50%=7.00; 80%=12.00; 90%=13.00; 95%=17.00; 99%=18.00
-Counter: CachedCompile
-  Value: 18
+  TotalSamples: 9
+  Accumulator: 239.00
+  ValueRate: 914.88 / second
+  Rate: 34.4516 / second
+  Percentiles: 1%=6.00; 5%=6.00; 10%=6.00; 20%=6.00; 50%=8.00; 80%=9.00; 90%=182.00; 95%=182.00; 99%=182.00
 Counter: CreateLtcTensor
   Value: 259
 Counter: DestroyLtcTensor
@@ -32,11 +30,9 @@ Counter: DestroyLtcTensor
 Counter: DeviceDataCacheMiss
   Value: 1
 Counter: UncachedCompile
-  Value: 48
+  Value: 9
 Counter: aten::_local_scalar_dense
   Value: 9
-Counter: aten::convolution_overrideable
-  Value: 20
 Counter: aten::max_pool2d_with_indices
   Value: 1
 Counter: aten::mean.out
@@ -44,7 +40,7 @@ Counter: aten::mean.out
 Counter: aten::sort
   Value: 1
 Counter: lazy::_copy_from
-  Value: 188
+  Value: 148
 Counter: lazy::_copy_from_and_resize
   Value: 1
 Counter: lazy::_softmax
@@ -53,6 +49,8 @@ Counter: lazy::add
   Value: 8
 Counter: lazy::addmm
   Value: 1
+Counter: lazy::convolution_overrideable
+  Value: 20
 Counter: lazy::mul
   Value: 1
 Counter: lazy::native_batch_norm
