@@ -6,23 +6,23 @@ Top 3 predictions:
 
 Metrics report:
 Metric: DeviceLockWait
-  TotalSamples: 9
-  Accumulator: 014.580us
-  ValueRate: 054.605us / second
-  Rate: 33.7068 / second
-  Percentiles: 1%=000.838us; 5%=000.838us; 10%=000.838us; 20%=000.855us; 50%=001.200us; 80%=002.478us; 90%=003.811us; 95%=003.811us; 99%=003.811us
+  TotalSamples: 8
+  Accumulator: 009.398us
+  ValueRate: 052.437us / second
+  Rate: 44.6365 / second
+  Percentiles: 1%=000.764us; 5%=000.764us; 10%=000.764us; 20%=000.814us; 50%=001.048us; 80%=001.606us; 90%=002.079us; 95%=002.079us; 99%=002.079us
 Metric: IrValueTensorToDataHandle
-  TotalSamples: 108
-  Accumulator: 358.414us
-  ValueRate: 450.749us / second
-  Rate: 135.823 / second
-  Percentiles: 1%=001.606us; 5%=001.638us; 10%=001.718us; 20%=001.824us; 50%=002.054us; 80%=002.625us; 90%=003.097us; 95%=005.973us; 99%=023.108us
+  TotalSamples: 107
+  Accumulator: 335.228us
+  ValueRate: 763.731us / second
+  Rate: 243.772 / second
+  Percentiles: 1%=001.679us; 5%=001.741us; 10%=001.788us; 20%=001.878us; 50%=002.120us; 80%=002.816us; 90%=003.401us; 95%=005.961us; 99%=025.354us
 Metric: TensorsGraphSize
-  TotalSamples: 9
-  Accumulator: 239.00
-  ValueRate: 914.88 / second
-  Rate: 34.4516 / second
-  Percentiles: 1%=6.00; 5%=6.00; 10%=6.00; 20%=6.00; 50%=8.00; 80%=9.00; 90%=182.00; 95%=182.00; 99%=182.00
+  TotalSamples: 8
+  Accumulator: 215.00
+  ValueRate: 1236.11 / second
+  Rate: 45.9949 / second
+  Percentiles: 1%=6.00; 5%=6.00; 10%=6.00; 20%=6.00; 50%=8.00; 80%=9.00; 90%=164.00; 95%=164.00; 99%=164.00
 Counter: CreateLtcTensor
   Value: 259
 Counter: DestroyLtcTensor
@@ -30,19 +30,15 @@ Counter: DestroyLtcTensor
 Counter: DeviceDataCacheMiss
   Value: 1
 Counter: UncachedCompile
-  Value: 9
+  Value: 8
 Counter: aten::_local_scalar_dense
   Value: 9
 Counter: aten::max_pool2d_with_indices
   Value: 1
-Counter: aten::mean.out
-  Value: 1
 Counter: aten::sort
   Value: 1
 Counter: lazy::_copy_from
-  Value: 148
-Counter: lazy::_copy_from_and_resize
-  Value: 1
+  Value: 146
 Counter: lazy::_softmax
   Value: 1
 Counter: lazy::add
@@ -51,6 +47,8 @@ Counter: lazy::addmm
   Value: 1
 Counter: lazy::convolution_overrideable
   Value: 20
+Counter: lazy::mean
+  Value: 1
 Counter: lazy::mul
   Value: 1
 Counter: lazy::native_batch_norm
@@ -65,4 +63,663 @@ Counter: lazy::t
   Value: 1
 Counter: lazy::view
   Value: 1
+
+graph(%p0 : Tensor,
+      %p1 : Tensor,
+      %p2 : Tensor,
+      %p3 : Tensor,
+      %p4 : Tensor,
+      %p5 : Tensor,
+      %p6 : Tensor,
+      %p7 : Tensor,
+      %p8 : Tensor,
+      %p9 : Tensor,
+      %p10 : Tensor,
+      %p11 : Tensor,
+      %p12 : Tensor,
+      %p13 : Tensor,
+      %p14 : Tensor,
+      %p15 : Tensor,
+      %p16 : Tensor,
+      %p17 : Tensor,
+      %p18 : Tensor,
+      %p19 : Tensor,
+      %p20 : Tensor,
+      %p21 : Tensor,
+      %p22 : Tensor,
+      %p23 : Tensor,
+      %p24 : Tensor,
+      %p25 : Tensor,
+      %p26 : Tensor,
+      %p27 : Tensor,
+      %p28 : Tensor,
+      %p29 : Tensor,
+      %p30 : Tensor,
+      %p31 : Tensor,
+      %p32 : Tensor,
+      %p33 : Tensor,
+      %p34 : Tensor,
+      %p35 : Tensor,
+      %p36 : Tensor,
+      %p37 : Tensor,
+      %p38 : Tensor,
+      %p39 : Tensor,
+      %p40 : Tensor,
+      %p41 : Tensor,
+      %p42 : Tensor,
+      %p43 : Tensor,
+      %p44 : Tensor,
+      %p45 : Tensor,
+      %p46 : Tensor,
+      %p47 : Tensor,
+      %p48 : Tensor,
+      %p49 : Tensor,
+      %p50 : Tensor,
+      %p51 : Tensor,
+      %p52 : Tensor,
+      %p53 : Tensor,
+      %p54 : Tensor,
+      %p55 : Tensor,
+      %p56 : Tensor,
+      %p57 : Tensor,
+      %p58 : Tensor,
+      %p59 : Tensor,
+      %p60 : Tensor,
+      %p61 : Tensor,
+      %p62 : Tensor,
+      %p63 : Tensor,
+      %p64 : Tensor,
+      %p65 : Tensor,
+      %p66 : Tensor,
+      %p67 : Tensor,
+      %p68 : Tensor,
+      %p69 : Tensor,
+      %p70 : Tensor,
+      %p71 : Tensor,
+      %p72 : Tensor,
+      %p73 : Tensor,
+      %p74 : Tensor,
+      %p75 : Tensor,
+      %p76 : Tensor,
+      %p77 : Tensor,
+      %p78 : Tensor,
+      %p79 : Tensor,
+      %p80 : Tensor,
+      %p81 : Tensor,
+      %p82 : Tensor,
+      %p83 : Tensor,
+      %p84 : Tensor,
+      %p85 : Tensor,
+      %p86 : Tensor,
+      %p87 : Tensor,
+      %p88 : Tensor,
+      %p89 : Tensor,
+      %p90 : Tensor,
+      %p91 : Tensor,
+      %p92 : Tensor,
+      %p93 : Tensor,
+      %p94 : Tensor,
+      %p95 : Tensor,
+      %p96 : Tensor,
+      %p97 : Tensor):
+  %98 : int[] = prim::Constant[value=[1, 0]]()
+  %99 : int[] = prim::Constant[value=[1, 0]]()
+  %100 : Tensor = aten::permute(%p1, %99)
+  %101 : NoneType = prim::Constant()
+  %102 : int[] = prim::Constant[value=[1, 1]]()
+  %103 : int[] = prim::Constant[value=[1, 1]]()
+  %104 : int[] = prim::Constant[value=[1, 1]]()
+  %105 : bool = prim::Constant[value=0]()
+  %106 : int[] = prim::Constant[value=[0, 0]]()
+  %107 : int = prim::Constant[value=1]()
+  %108 : bool = prim::Constant[value=0]()
+  %109 : bool = prim::Constant[value=0]()
+  %110 : bool = prim::Constant[value=1]()
+  %111 : NoneType = prim::Constant()
+  %112 : int[] = prim::Constant[value=[1, 1]]()
+  %113 : int[] = prim::Constant[value=[1, 1]]()
+  %114 : int[] = prim::Constant[value=[1, 1]]()
+  %115 : bool = prim::Constant[value=0]()
+  %116 : int[] = prim::Constant[value=[0, 0]]()
+  %117 : int = prim::Constant[value=1]()
+  %118 : bool = prim::Constant[value=0]()
+  %119 : bool = prim::Constant[value=0]()
+  %120 : bool = prim::Constant[value=1]()
+  %121 : bool = prim::Constant[value=1]()
+  %122 : Tensor = aten::_convolution(%p17, %p27, %111, %112, %113, %114, %115, %116, %117, %118, %119, %120, %121)
+  %123 : bool = prim::Constant[value=0]()
+  %124 : float = prim::Constant[value=0.10000000000000001]()
+  %125 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %126 : Tensor, %127 : Tensor, %128 : Tensor = aten::native_batch_norm(%122, %p26, %p25, %p24, %p23, %123, %124, %125)
+  %129 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%126, %127, %128)
+  %130 : Tensor = aten::relu(%126)
+  %131 : NoneType = prim::Constant()
+  %132 : int[] = prim::Constant[value=[1, 1]]()
+  %133 : int[] = prim::Constant[value=[1, 1]]()
+  %134 : int[] = prim::Constant[value=[1, 1]]()
+  %135 : bool = prim::Constant[value=0]()
+  %136 : int[] = prim::Constant[value=[0, 0]]()
+  %137 : int = prim::Constant[value=1]()
+  %138 : bool = prim::Constant[value=0]()
+  %139 : bool = prim::Constant[value=0]()
+  %140 : bool = prim::Constant[value=1]()
+  %141 : NoneType = prim::Constant()
+  %142 : int[] = prim::Constant[value=[1, 1]]()
+  %143 : int[] = prim::Constant[value=[1, 1]]()
+  %144 : int[] = prim::Constant[value=[1, 1]]()
+  %145 : bool = prim::Constant[value=0]()
+  %146 : int[] = prim::Constant[value=[0, 0]]()
+  %147 : int = prim::Constant[value=1]()
+  %148 : bool = prim::Constant[value=0]()
+  %149 : bool = prim::Constant[value=0]()
+  %150 : bool = prim::Constant[value=1]()
+  %151 : bool = prim::Constant[value=1]()
+  %152 : Tensor = aten::_convolution(%130, %p22, %141, %142, %143, %144, %145, %146, %147, %148, %149, %150, %151)
+  %153 : bool = prim::Constant[value=0]()
+  %154 : float = prim::Constant[value=0.10000000000000001]()
+  %155 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %156 : Tensor, %157 : Tensor, %158 : Tensor = aten::native_batch_norm(%152, %p21, %p20, %p19, %p18, %153, %154, %155)
+  %159 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%156, %157, %158)
+  %160 : int = prim::Constant[value=1]()
+  %161 : Tensor = aten::add(%156, %p17, %160)
+  %162 : Tensor = aten::relu(%161)
+  %163 : NoneType = prim::Constant()
+  %164 : int[] = prim::Constant[value=[1, 1]]()
+  %165 : int[] = prim::Constant[value=[1, 1]]()
+  %166 : int[] = prim::Constant[value=[1, 1]]()
+  %167 : bool = prim::Constant[value=0]()
+  %168 : int[] = prim::Constant[value=[0, 0]]()
+  %169 : int = prim::Constant[value=1]()
+  %170 : bool = prim::Constant[value=0]()
+  %171 : bool = prim::Constant[value=0]()
+  %172 : bool = prim::Constant[value=1]()
+  %173 : NoneType = prim::Constant()
+  %174 : int[] = prim::Constant[value=[1, 1]]()
+  %175 : int[] = prim::Constant[value=[1, 1]]()
+  %176 : int[] = prim::Constant[value=[1, 1]]()
+  %177 : bool = prim::Constant[value=0]()
+  %178 : int[] = prim::Constant[value=[0, 0]]()
+  %179 : int = prim::Constant[value=1]()
+  %180 : bool = prim::Constant[value=0]()
+  %181 : bool = prim::Constant[value=0]()
+  %182 : bool = prim::Constant[value=1]()
+  %183 : bool = prim::Constant[value=1]()
+  %184 : Tensor = aten::_convolution(%162, %p37, %173, %174, %175, %176, %177, %178, %179, %180, %181, %182, %183)
+  %185 : bool = prim::Constant[value=0]()
+  %186 : float = prim::Constant[value=0.10000000000000001]()
+  %187 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %188 : Tensor, %189 : Tensor, %190 : Tensor = aten::native_batch_norm(%184, %p36, %p35, %p34, %p33, %185, %186, %187)
+  %191 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%188, %189, %190)
+  %192 : Tensor = aten::relu(%188)
+  %193 : NoneType = prim::Constant()
+  %194 : int[] = prim::Constant[value=[1, 1]]()
+  %195 : int[] = prim::Constant[value=[1, 1]]()
+  %196 : int[] = prim::Constant[value=[1, 1]]()
+  %197 : bool = prim::Constant[value=0]()
+  %198 : int[] = prim::Constant[value=[0, 0]]()
+  %199 : int = prim::Constant[value=1]()
+  %200 : bool = prim::Constant[value=0]()
+  %201 : bool = prim::Constant[value=0]()
+  %202 : bool = prim::Constant[value=1]()
+  %203 : NoneType = prim::Constant()
+  %204 : int[] = prim::Constant[value=[1, 1]]()
+  %205 : int[] = prim::Constant[value=[1, 1]]()
+  %206 : int[] = prim::Constant[value=[1, 1]]()
+  %207 : bool = prim::Constant[value=0]()
+  %208 : int[] = prim::Constant[value=[0, 0]]()
+  %209 : int = prim::Constant[value=1]()
+  %210 : bool = prim::Constant[value=0]()
+  %211 : bool = prim::Constant[value=0]()
+  %212 : bool = prim::Constant[value=1]()
+  %213 : bool = prim::Constant[value=1]()
+  %214 : Tensor = aten::_convolution(%192, %p32, %203, %204, %205, %206, %207, %208, %209, %210, %211, %212, %213)
+  %215 : bool = prim::Constant[value=0]()
+  %216 : float = prim::Constant[value=0.10000000000000001]()
+  %217 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %218 : Tensor, %219 : Tensor, %220 : Tensor = aten::native_batch_norm(%214, %p31, %p30, %p29, %p28, %215, %216, %217)
+  %221 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%218, %219, %220)
+  %222 : int = prim::Constant[value=1]()
+  %223 : Tensor = aten::add(%218, %162, %222)
+  %224 : Tensor = aten::relu(%223)
+  %225 : NoneType = prim::Constant()
+  %226 : int[] = prim::Constant[value=[2, 2]]()
+  %227 : int[] = prim::Constant[value=[0, 0]]()
+  %228 : int[] = prim::Constant[value=[1, 1]]()
+  %229 : bool = prim::Constant[value=0]()
+  %230 : int[] = prim::Constant[value=[0, 0]]()
+  %231 : int = prim::Constant[value=1]()
+  %232 : bool = prim::Constant[value=0]()
+  %233 : bool = prim::Constant[value=0]()
+  %234 : bool = prim::Constant[value=1]()
+  %235 : NoneType = prim::Constant()
+  %236 : int[] = prim::Constant[value=[2, 2]]()
+  %237 : int[] = prim::Constant[value=[0, 0]]()
+  %238 : int[] = prim::Constant[value=[1, 1]]()
+  %239 : bool = prim::Constant[value=0]()
+  %240 : int[] = prim::Constant[value=[0, 0]]()
+  %241 : int = prim::Constant[value=1]()
+  %242 : bool = prim::Constant[value=0]()
+  %243 : bool = prim::Constant[value=0]()
+  %244 : bool = prim::Constant[value=1]()
+  %245 : bool = prim::Constant[value=1]()
+  %246 : Tensor = aten::_convolution(%224, %p16, %235, %236, %237, %238, %239, %240, %241, %242, %243, %244, %245)
+  %247 : bool = prim::Constant[value=0]()
+  %248 : float = prim::Constant[value=0.10000000000000001]()
+  %249 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %250 : Tensor, %251 : Tensor, %252 : Tensor = aten::native_batch_norm(%246, %p15, %p14, %p13, %p12, %247, %248, %249)
+  %253 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%250, %251, %252)
+  %254 : NoneType = prim::Constant()
+  %255 : int[] = prim::Constant[value=[2, 2]]()
+  %256 : int[] = prim::Constant[value=[1, 1]]()
+  %257 : int[] = prim::Constant[value=[1, 1]]()
+  %258 : bool = prim::Constant[value=0]()
+  %259 : int[] = prim::Constant[value=[0, 0]]()
+  %260 : int = prim::Constant[value=1]()
+  %261 : bool = prim::Constant[value=0]()
+  %262 : bool = prim::Constant[value=0]()
+  %263 : bool = prim::Constant[value=1]()
+  %264 : NoneType = prim::Constant()
+  %265 : int[] = prim::Constant[value=[2, 2]]()
+  %266 : int[] = prim::Constant[value=[1, 1]]()
+  %267 : int[] = prim::Constant[value=[1, 1]]()
+  %268 : bool = prim::Constant[value=0]()
+  %269 : int[] = prim::Constant[value=[0, 0]]()
+  %270 : int = prim::Constant[value=1]()
+  %271 : bool = prim::Constant[value=0]()
+  %272 : bool = prim::Constant[value=0]()
+  %273 : bool = prim::Constant[value=1]()
+  %274 : bool = prim::Constant[value=1]()
+  %275 : Tensor = aten::_convolution(%224, %p47, %264, %265, %266, %267, %268, %269, %270, %271, %272, %273, %274)
+  %276 : bool = prim::Constant[value=0]()
+  %277 : float = prim::Constant[value=0.10000000000000001]()
+  %278 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %279 : Tensor, %280 : Tensor, %281 : Tensor = aten::native_batch_norm(%275, %p46, %p45, %p44, %p43, %276, %277, %278)
+  %282 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%279, %280, %281)
+  %283 : Tensor = aten::relu(%279)
+  %284 : NoneType = prim::Constant()
+  %285 : int[] = prim::Constant[value=[1, 1]]()
+  %286 : int[] = prim::Constant[value=[1, 1]]()
+  %287 : int[] = prim::Constant[value=[1, 1]]()
+  %288 : bool = prim::Constant[value=0]()
+  %289 : int[] = prim::Constant[value=[0, 0]]()
+  %290 : int = prim::Constant[value=1]()
+  %291 : bool = prim::Constant[value=0]()
+  %292 : bool = prim::Constant[value=0]()
+  %293 : bool = prim::Constant[value=1]()
+  %294 : NoneType = prim::Constant()
+  %295 : int[] = prim::Constant[value=[1, 1]]()
+  %296 : int[] = prim::Constant[value=[1, 1]]()
+  %297 : int[] = prim::Constant[value=[1, 1]]()
+  %298 : bool = prim::Constant[value=0]()
+  %299 : int[] = prim::Constant[value=[0, 0]]()
+  %300 : int = prim::Constant[value=1]()
+  %301 : bool = prim::Constant[value=0]()
+  %302 : bool = prim::Constant[value=0]()
+  %303 : bool = prim::Constant[value=1]()
+  %304 : bool = prim::Constant[value=1]()
+  %305 : Tensor = aten::_convolution(%283, %p42, %294, %295, %296, %297, %298, %299, %300, %301, %302, %303, %304)
+  %306 : bool = prim::Constant[value=0]()
+  %307 : float = prim::Constant[value=0.10000000000000001]()
+  %308 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %309 : Tensor, %310 : Tensor, %311 : Tensor = aten::native_batch_norm(%305, %p41, %p40, %p39, %p38, %306, %307, %308)
+  %312 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%309, %310, %311)
+  %313 : int = prim::Constant[value=1]()
+  %314 : Tensor = aten::add(%309, %250, %313)
+  %315 : Tensor = aten::relu(%314)
+  %316 : NoneType = prim::Constant()
+  %317 : int[] = prim::Constant[value=[1, 1]]()
+  %318 : int[] = prim::Constant[value=[1, 1]]()
+  %319 : int[] = prim::Constant[value=[1, 1]]()
+  %320 : bool = prim::Constant[value=0]()
+  %321 : int[] = prim::Constant[value=[0, 0]]()
+  %322 : int = prim::Constant[value=1]()
+  %323 : bool = prim::Constant[value=0]()
+  %324 : bool = prim::Constant[value=0]()
+  %325 : bool = prim::Constant[value=1]()
+  %326 : NoneType = prim::Constant()
+  %327 : int[] = prim::Constant[value=[1, 1]]()
+  %328 : int[] = prim::Constant[value=[1, 1]]()
+  %329 : int[] = prim::Constant[value=[1, 1]]()
+  %330 : bool = prim::Constant[value=0]()
+  %331 : int[] = prim::Constant[value=[0, 0]]()
+  %332 : int = prim::Constant[value=1]()
+  %333 : bool = prim::Constant[value=0]()
+  %334 : bool = prim::Constant[value=0]()
+  %335 : bool = prim::Constant[value=1]()
+  %336 : bool = prim::Constant[value=1]()
+  %337 : Tensor = aten::_convolution(%315, %p57, %326, %327, %328, %329, %330, %331, %332, %333, %334, %335, %336)
+  %338 : bool = prim::Constant[value=0]()
+  %339 : float = prim::Constant[value=0.10000000000000001]()
+  %340 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %341 : Tensor, %342 : Tensor, %343 : Tensor = aten::native_batch_norm(%337, %p56, %p55, %p54, %p53, %338, %339, %340)
+  %344 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%341, %342, %343)
+  %345 : Tensor = aten::relu(%341)
+  %346 : NoneType = prim::Constant()
+  %347 : int[] = prim::Constant[value=[1, 1]]()
+  %348 : int[] = prim::Constant[value=[1, 1]]()
+  %349 : int[] = prim::Constant[value=[1, 1]]()
+  %350 : bool = prim::Constant[value=0]()
+  %351 : int[] = prim::Constant[value=[0, 0]]()
+  %352 : int = prim::Constant[value=1]()
+  %353 : bool = prim::Constant[value=0]()
+  %354 : bool = prim::Constant[value=0]()
+  %355 : bool = prim::Constant[value=1]()
+  %356 : NoneType = prim::Constant()
+  %357 : int[] = prim::Constant[value=[1, 1]]()
+  %358 : int[] = prim::Constant[value=[1, 1]]()
+  %359 : int[] = prim::Constant[value=[1, 1]]()
+  %360 : bool = prim::Constant[value=0]()
+  %361 : int[] = prim::Constant[value=[0, 0]]()
+  %362 : int = prim::Constant[value=1]()
+  %363 : bool = prim::Constant[value=0]()
+  %364 : bool = prim::Constant[value=0]()
+  %365 : bool = prim::Constant[value=1]()
+  %366 : bool = prim::Constant[value=1]()
+  %367 : Tensor = aten::_convolution(%345, %p52, %356, %357, %358, %359, %360, %361, %362, %363, %364, %365, %366)
+  %368 : bool = prim::Constant[value=0]()
+  %369 : float = prim::Constant[value=0.10000000000000001]()
+  %370 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %371 : Tensor, %372 : Tensor, %373 : Tensor = aten::native_batch_norm(%367, %p51, %p50, %p49, %p48, %368, %369, %370)
+  %374 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%371, %372, %373)
+  %375 : int = prim::Constant[value=1]()
+  %376 : Tensor = aten::add(%371, %315, %375)
+  %377 : Tensor = aten::relu(%376)
+  %378 : NoneType = prim::Constant()
+  %379 : int[] = prim::Constant[value=[2, 2]]()
+  %380 : int[] = prim::Constant[value=[0, 0]]()
+  %381 : int[] = prim::Constant[value=[1, 1]]()
+  %382 : bool = prim::Constant[value=0]()
+  %383 : int[] = prim::Constant[value=[0, 0]]()
+  %384 : int = prim::Constant[value=1]()
+  %385 : bool = prim::Constant[value=0]()
+  %386 : bool = prim::Constant[value=0]()
+  %387 : bool = prim::Constant[value=1]()
+  %388 : NoneType = prim::Constant()
+  %389 : int[] = prim::Constant[value=[2, 2]]()
+  %390 : int[] = prim::Constant[value=[0, 0]]()
+  %391 : int[] = prim::Constant[value=[1, 1]]()
+  %392 : bool = prim::Constant[value=0]()
+  %393 : int[] = prim::Constant[value=[0, 0]]()
+  %394 : int = prim::Constant[value=1]()
+  %395 : bool = prim::Constant[value=0]()
+  %396 : bool = prim::Constant[value=0]()
+  %397 : bool = prim::Constant[value=1]()
+  %398 : bool = prim::Constant[value=1]()
+  %399 : Tensor = aten::_convolution(%377, %p11, %388, %389, %390, %391, %392, %393, %394, %395, %396, %397, %398)
+  %400 : bool = prim::Constant[value=0]()
+  %401 : float = prim::Constant[value=0.10000000000000001]()
+  %402 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %403 : Tensor, %404 : Tensor, %405 : Tensor = aten::native_batch_norm(%399, %p10, %p9, %p8, %p7, %400, %401, %402)
+  %406 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%403, %404, %405)
+  %407 : NoneType = prim::Constant()
+  %408 : int[] = prim::Constant[value=[2, 2]]()
+  %409 : int[] = prim::Constant[value=[1, 1]]()
+  %410 : int[] = prim::Constant[value=[1, 1]]()
+  %411 : bool = prim::Constant[value=0]()
+  %412 : int[] = prim::Constant[value=[0, 0]]()
+  %413 : int = prim::Constant[value=1]()
+  %414 : bool = prim::Constant[value=0]()
+  %415 : bool = prim::Constant[value=0]()
+  %416 : bool = prim::Constant[value=1]()
+  %417 : NoneType = prim::Constant()
+  %418 : int[] = prim::Constant[value=[2, 2]]()
+  %419 : int[] = prim::Constant[value=[1, 1]]()
+  %420 : int[] = prim::Constant[value=[1, 1]]()
+  %421 : bool = prim::Constant[value=0]()
+  %422 : int[] = prim::Constant[value=[0, 0]]()
+  %423 : int = prim::Constant[value=1]()
+  %424 : bool = prim::Constant[value=0]()
+  %425 : bool = prim::Constant[value=0]()
+  %426 : bool = prim::Constant[value=1]()
+  %427 : bool = prim::Constant[value=1]()
+  %428 : Tensor = aten::_convolution(%377, %p67, %417, %418, %419, %420, %421, %422, %423, %424, %425, %426, %427)
+  %429 : bool = prim::Constant[value=0]()
+  %430 : float = prim::Constant[value=0.10000000000000001]()
+  %431 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %432 : Tensor, %433 : Tensor, %434 : Tensor = aten::native_batch_norm(%428, %p66, %p65, %p64, %p63, %429, %430, %431)
+  %435 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%432, %433, %434)
+  %436 : Tensor = aten::relu(%432)
+  %437 : NoneType = prim::Constant()
+  %438 : int[] = prim::Constant[value=[1, 1]]()
+  %439 : int[] = prim::Constant[value=[1, 1]]()
+  %440 : int[] = prim::Constant[value=[1, 1]]()
+  %441 : bool = prim::Constant[value=0]()
+  %442 : int[] = prim::Constant[value=[0, 0]]()
+  %443 : int = prim::Constant[value=1]()
+  %444 : bool = prim::Constant[value=0]()
+  %445 : bool = prim::Constant[value=0]()
+  %446 : bool = prim::Constant[value=1]()
+  %447 : NoneType = prim::Constant()
+  %448 : int[] = prim::Constant[value=[1, 1]]()
+  %449 : int[] = prim::Constant[value=[1, 1]]()
+  %450 : int[] = prim::Constant[value=[1, 1]]()
+  %451 : bool = prim::Constant[value=0]()
+  %452 : int[] = prim::Constant[value=[0, 0]]()
+  %453 : int = prim::Constant[value=1]()
+  %454 : bool = prim::Constant[value=0]()
+  %455 : bool = prim::Constant[value=0]()
+  %456 : bool = prim::Constant[value=1]()
+  %457 : bool = prim::Constant[value=1]()
+  %458 : Tensor = aten::_convolution(%436, %p62, %447, %448, %449, %450, %451, %452, %453, %454, %455, %456, %457)
+  %459 : bool = prim::Constant[value=0]()
+  %460 : float = prim::Constant[value=0.10000000000000001]()
+  %461 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %462 : Tensor, %463 : Tensor, %464 : Tensor = aten::native_batch_norm(%458, %p61, %p60, %p59, %p58, %459, %460, %461)
+  %465 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%462, %463, %464)
+  %466 : int = prim::Constant[value=1]()
+  %467 : Tensor = aten::add(%462, %403, %466)
+  %468 : Tensor = aten::relu(%467)
+  %469 : NoneType = prim::Constant()
+  %470 : int[] = prim::Constant[value=[1, 1]]()
+  %471 : int[] = prim::Constant[value=[1, 1]]()
+  %472 : int[] = prim::Constant[value=[1, 1]]()
+  %473 : bool = prim::Constant[value=0]()
+  %474 : int[] = prim::Constant[value=[0, 0]]()
+  %475 : int = prim::Constant[value=1]()
+  %476 : bool = prim::Constant[value=0]()
+  %477 : bool = prim::Constant[value=0]()
+  %478 : bool = prim::Constant[value=1]()
+  %479 : NoneType = prim::Constant()
+  %480 : int[] = prim::Constant[value=[1, 1]]()
+  %481 : int[] = prim::Constant[value=[1, 1]]()
+  %482 : int[] = prim::Constant[value=[1, 1]]()
+  %483 : bool = prim::Constant[value=0]()
+  %484 : int[] = prim::Constant[value=[0, 0]]()
+  %485 : int = prim::Constant[value=1]()
+  %486 : bool = prim::Constant[value=0]()
+  %487 : bool = prim::Constant[value=0]()
+  %488 : bool = prim::Constant[value=1]()
+  %489 : bool = prim::Constant[value=1]()
+  %490 : Tensor = aten::_convolution(%468, %p77, %479, %480, %481, %482, %483, %484, %485, %486, %487, %488, %489)
+  %491 : bool = prim::Constant[value=0]()
+  %492 : float = prim::Constant[value=0.10000000000000001]()
+  %493 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %494 : Tensor, %495 : Tensor, %496 : Tensor = aten::native_batch_norm(%490, %p76, %p75, %p74, %p73, %491, %492, %493)
+  %497 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%494, %495, %496)
+  %498 : Tensor = aten::relu(%494)
+  %499 : NoneType = prim::Constant()
+  %500 : int[] = prim::Constant[value=[1, 1]]()
+  %501 : int[] = prim::Constant[value=[1, 1]]()
+  %502 : int[] = prim::Constant[value=[1, 1]]()
+  %503 : bool = prim::Constant[value=0]()
+  %504 : int[] = prim::Constant[value=[0, 0]]()
+  %505 : int = prim::Constant[value=1]()
+  %506 : bool = prim::Constant[value=0]()
+  %507 : bool = prim::Constant[value=0]()
+  %508 : bool = prim::Constant[value=1]()
+  %509 : NoneType = prim::Constant()
+  %510 : int[] = prim::Constant[value=[1, 1]]()
+  %511 : int[] = prim::Constant[value=[1, 1]]()
+  %512 : int[] = prim::Constant[value=[1, 1]]()
+  %513 : bool = prim::Constant[value=0]()
+  %514 : int[] = prim::Constant[value=[0, 0]]()
+  %515 : int = prim::Constant[value=1]()
+  %516 : bool = prim::Constant[value=0]()
+  %517 : bool = prim::Constant[value=0]()
+  %518 : bool = prim::Constant[value=1]()
+  %519 : bool = prim::Constant[value=1]()
+  %520 : Tensor = aten::_convolution(%498, %p72, %509, %510, %511, %512, %513, %514, %515, %516, %517, %518, %519)
+  %521 : bool = prim::Constant[value=0]()
+  %522 : float = prim::Constant[value=0.10000000000000001]()
+  %523 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %524 : Tensor, %525 : Tensor, %526 : Tensor = aten::native_batch_norm(%520, %p71, %p70, %p69, %p68, %521, %522, %523)
+  %527 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%524, %525, %526)
+  %528 : int = prim::Constant[value=1]()
+  %529 : Tensor = aten::add(%524, %468, %528)
+  %530 : Tensor = aten::relu(%529)
+  %531 : NoneType = prim::Constant()
+  %532 : int[] = prim::Constant[value=[2, 2]]()
+  %533 : int[] = prim::Constant[value=[0, 0]]()
+  %534 : int[] = prim::Constant[value=[1, 1]]()
+  %535 : bool = prim::Constant[value=0]()
+  %536 : int[] = prim::Constant[value=[0, 0]]()
+  %537 : int = prim::Constant[value=1]()
+  %538 : bool = prim::Constant[value=0]()
+  %539 : bool = prim::Constant[value=0]()
+  %540 : bool = prim::Constant[value=1]()
+  %541 : NoneType = prim::Constant()
+  %542 : int[] = prim::Constant[value=[2, 2]]()
+  %543 : int[] = prim::Constant[value=[0, 0]]()
+  %544 : int[] = prim::Constant[value=[1, 1]]()
+  %545 : bool = prim::Constant[value=0]()
+  %546 : int[] = prim::Constant[value=[0, 0]]()
+  %547 : int = prim::Constant[value=1]()
+  %548 : bool = prim::Constant[value=0]()
+  %549 : bool = prim::Constant[value=0]()
+  %550 : bool = prim::Constant[value=1]()
+  %551 : bool = prim::Constant[value=1]()
+  %552 : Tensor = aten::_convolution(%530, %p6, %541, %542, %543, %544, %545, %546, %547, %548, %549, %550, %551)
+  %553 : bool = prim::Constant[value=0]()
+  %554 : float = prim::Constant[value=0.10000000000000001]()
+  %555 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %556 : Tensor, %557 : Tensor, %558 : Tensor = aten::native_batch_norm(%552, %p5, %p4, %p3, %p2, %553, %554, %555)
+  %559 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%556, %557, %558)
+  %560 : NoneType = prim::Constant()
+  %561 : int[] = prim::Constant[value=[2, 2]]()
+  %562 : int[] = prim::Constant[value=[1, 1]]()
+  %563 : int[] = prim::Constant[value=[1, 1]]()
+  %564 : bool = prim::Constant[value=0]()
+  %565 : int[] = prim::Constant[value=[0, 0]]()
+  %566 : int = prim::Constant[value=1]()
+  %567 : bool = prim::Constant[value=0]()
+  %568 : bool = prim::Constant[value=0]()
+  %569 : bool = prim::Constant[value=1]()
+  %570 : NoneType = prim::Constant()
+  %571 : int[] = prim::Constant[value=[2, 2]]()
+  %572 : int[] = prim::Constant[value=[1, 1]]()
+  %573 : int[] = prim::Constant[value=[1, 1]]()
+  %574 : bool = prim::Constant[value=0]()
+  %575 : int[] = prim::Constant[value=[0, 0]]()
+  %576 : int = prim::Constant[value=1]()
+  %577 : bool = prim::Constant[value=0]()
+  %578 : bool = prim::Constant[value=0]()
+  %579 : bool = prim::Constant[value=1]()
+  %580 : bool = prim::Constant[value=1]()
+  %581 : Tensor = aten::_convolution(%530, %p87, %570, %571, %572, %573, %574, %575, %576, %577, %578, %579, %580)
+  %582 : bool = prim::Constant[value=0]()
+  %583 : float = prim::Constant[value=0.10000000000000001]()
+  %584 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %585 : Tensor, %586 : Tensor, %587 : Tensor = aten::native_batch_norm(%581, %p86, %p85, %p84, %p83, %582, %583, %584)
+  %588 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%585, %586, %587)
+  %589 : Tensor = aten::relu(%585)
+  %590 : NoneType = prim::Constant()
+  %591 : int[] = prim::Constant[value=[1, 1]]()
+  %592 : int[] = prim::Constant[value=[1, 1]]()
+  %593 : int[] = prim::Constant[value=[1, 1]]()
+  %594 : bool = prim::Constant[value=0]()
+  %595 : int[] = prim::Constant[value=[0, 0]]()
+  %596 : int = prim::Constant[value=1]()
+  %597 : bool = prim::Constant[value=0]()
+  %598 : bool = prim::Constant[value=0]()
+  %599 : bool = prim::Constant[value=1]()
+  %600 : NoneType = prim::Constant()
+  %601 : int[] = prim::Constant[value=[1, 1]]()
+  %602 : int[] = prim::Constant[value=[1, 1]]()
+  %603 : int[] = prim::Constant[value=[1, 1]]()
+  %604 : bool = prim::Constant[value=0]()
+  %605 : int[] = prim::Constant[value=[0, 0]]()
+  %606 : int = prim::Constant[value=1]()
+  %607 : bool = prim::Constant[value=0]()
+  %608 : bool = prim::Constant[value=0]()
+  %609 : bool = prim::Constant[value=1]()
+  %610 : bool = prim::Constant[value=1]()
+  %611 : Tensor = aten::_convolution(%589, %p82, %600, %601, %602, %603, %604, %605, %606, %607, %608, %609, %610)
+  %612 : bool = prim::Constant[value=0]()
+  %613 : float = prim::Constant[value=0.10000000000000001]()
+  %614 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %615 : Tensor, %616 : Tensor, %617 : Tensor = aten::native_batch_norm(%611, %p81, %p80, %p79, %p78, %612, %613, %614)
+  %618 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%615, %616, %617)
+  %619 : int = prim::Constant[value=1]()
+  %620 : Tensor = aten::add(%615, %556, %619)
+  %621 : Tensor = aten::relu(%620)
+  %622 : NoneType = prim::Constant()
+  %623 : int[] = prim::Constant[value=[1, 1]]()
+  %624 : int[] = prim::Constant[value=[1, 1]]()
+  %625 : int[] = prim::Constant[value=[1, 1]]()
+  %626 : bool = prim::Constant[value=0]()
+  %627 : int[] = prim::Constant[value=[0, 0]]()
+  %628 : int = prim::Constant[value=1]()
+  %629 : bool = prim::Constant[value=0]()
+  %630 : bool = prim::Constant[value=0]()
+  %631 : bool = prim::Constant[value=1]()
+  %632 : NoneType = prim::Constant()
+  %633 : int[] = prim::Constant[value=[1, 1]]()
+  %634 : int[] = prim::Constant[value=[1, 1]]()
+  %635 : int[] = prim::Constant[value=[1, 1]]()
+  %636 : bool = prim::Constant[value=0]()
+  %637 : int[] = prim::Constant[value=[0, 0]]()
+  %638 : int = prim::Constant[value=1]()
+  %639 : bool = prim::Constant[value=0]()
+  %640 : bool = prim::Constant[value=0]()
+  %641 : bool = prim::Constant[value=1]()
+  %642 : bool = prim::Constant[value=1]()
+  %643 : Tensor = aten::_convolution(%621, %p97, %632, %633, %634, %635, %636, %637, %638, %639, %640, %641, %642)
+  %644 : bool = prim::Constant[value=0]()
+  %645 : float = prim::Constant[value=0.10000000000000001]()
+  %646 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %647 : Tensor, %648 : Tensor, %649 : Tensor = aten::native_batch_norm(%643, %p96, %p95, %p94, %p93, %644, %645, %646)
+  %650 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%647, %648, %649)
+  %651 : Tensor = aten::relu(%647)
+  %652 : NoneType = prim::Constant()
+  %653 : int[] = prim::Constant[value=[1, 1]]()
+  %654 : int[] = prim::Constant[value=[1, 1]]()
+  %655 : int[] = prim::Constant[value=[1, 1]]()
+  %656 : bool = prim::Constant[value=0]()
+  %657 : int[] = prim::Constant[value=[0, 0]]()
+  %658 : int = prim::Constant[value=1]()
+  %659 : bool = prim::Constant[value=0]()
+  %660 : bool = prim::Constant[value=0]()
+  %661 : bool = prim::Constant[value=1]()
+  %662 : NoneType = prim::Constant()
+  %663 : int[] = prim::Constant[value=[1, 1]]()
+  %664 : int[] = prim::Constant[value=[1, 1]]()
+  %665 : int[] = prim::Constant[value=[1, 1]]()
+  %666 : bool = prim::Constant[value=0]()
+  %667 : int[] = prim::Constant[value=[0, 0]]()
+  %668 : int = prim::Constant[value=1]()
+  %669 : bool = prim::Constant[value=0]()
+  %670 : bool = prim::Constant[value=0]()
+  %671 : bool = prim::Constant[value=1]()
+  %672 : bool = prim::Constant[value=1]()
+  %673 : Tensor = aten::_convolution(%651, %p92, %662, %663, %664, %665, %666, %667, %668, %669, %670, %671, %672)
+  %674 : bool = prim::Constant[value=0]()
+  %675 : float = prim::Constant[value=0.10000000000000001]()
+  %676 : float = prim::Constant[value=1.0000000000000001e-05]()
+  %677 : Tensor, %678 : Tensor, %679 : Tensor = aten::native_batch_norm(%673, %p91, %p90, %p89, %p88, %674, %675, %676)
+  %680 : (Tensor, Tensor, Tensor) = prim::TupleConstruct(%677, %678, %679)
+  %681 : int = prim::Constant[value=1]()
+  %682 : Tensor = aten::add(%677, %621, %681)
+  %683 : Tensor = aten::relu(%682)
+  %684 : NoneType = prim::Constant()
+  %685 : int[] = prim::Constant[value=[-1, -2]]()
+  %686 : bool = prim::Constant[value=1]()
+  %687 : NoneType = prim::Constant()
+  %688 : Tensor = aten::mean(%683, %685, %686, %687)
+  %689 : int[] = prim::Constant[value=[1, 512]]()
+  %690 : int[] = prim::Constant[value=[1, 512]]()
+  %691 : Tensor = aten::reshape(%688, %690)
+  %692 : int = prim::Constant[value=1]()
+  %693 : int = prim::Constant[value=1]()
+  %694 : Tensor = aten::addmm(%p0, %691, %100, %692, %693)
+  return (%694)
 

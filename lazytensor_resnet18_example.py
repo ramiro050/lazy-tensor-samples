@@ -95,6 +95,8 @@ def main():
 
     print('\nMetrics report:')
     print(metrics.metrics_report())
+    graph_str = ltc._LAZYC._get_ltc_tensors_backend([resnet_module.forward(img)])
+    print(graph_str)
 
 
 if __name__ == '__main__':
