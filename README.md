@@ -19,6 +19,29 @@ Update `PYTHONPATH`:
 export PYTHONPATH=/path/to/pytorch/lazy_tensor_core:$PYTHONPATH
 ```
 
+### Bert
+
+#### Setup
+
+First [install Lazy Tensor Core](#install-torchvision-and-lazy-tensor-core).
+
+Install the following Python packages:
+
+```shell
+python -m pip transformers datasets
+```
+
+#### Running Example
+
+From inside the `lazy-tensor-samples` directory, run:
+
+```shell
+python lazytensor_bert_example.py
+```
+
+The output of this example can be found in [lazytensor_bert_example_output.txt](https://github.com/ramiro050/lazy-tensor-samples/blob/main/lazytensor_bert_example_output.txt).
+
+
 ### MaskRCNN
 
 #### Setup
