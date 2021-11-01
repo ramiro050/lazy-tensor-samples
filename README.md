@@ -118,7 +118,7 @@ Install the library `libsndfile`. On Ubuntu, simply run
 sudo apt-get install libsndfile-dev
 ```
 
-Install the PyTorch benchmarks using my fork, which includes some changes to make the benchmark run on LTC:
+Install the PyTorch benchmarks using my fork, which includes some changes to make the benchmark run on LTC (the changes are based on [this](https://github.com/pytorch/benchmark/pull/456) patch by @alanwaketan):
 
 ```shell
 git clone https://github.com/ramiro050/benchmark.git
