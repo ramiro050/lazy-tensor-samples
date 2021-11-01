@@ -1,5 +1,26 @@
 # lazy-tensor-samples
 
+## Table of Contents
+
+- [lazy-tensor-samples](#lazy-tensor-samples)
+  * [How to Run Examples](#how-to-run-examples)
+    + [Install Torchvision and Lazy Tensor Core](#install-torchvision-and-lazy-tensor-core)
+    + [Bert](#bert)
+      - [Setup](#setup)
+      - [Running Example](#running-example)
+    + [MaskRCNN](#maskrcnn)
+      - [Setup](#setup-1)
+      - [Running Example](#running-example-1)
+    + [Resnet-18 Inference and Training](#resnet-18-inference-and-training)
+      - [Setup](#setup-2)
+      - [Additional steps for Inference](#additional-steps-for-inference)
+      - [Additional steps for Training](#additional-steps-for-training)
+      - [Running Inference Example](#running-inference-example)
+      - [Running Training Example](#running-training-example)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 ## How to Run Examples
 
 ### Install Torchvision and Lazy Tensor Core
