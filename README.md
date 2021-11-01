@@ -75,11 +75,13 @@ where `img.png` is the image to run the model on.
 
 The output of this example can be found in [lazytensor_maskrcnn_example_output.txt](https://github.com/ramiro050/lazy-tensor-samples/blob/main/lazytensor_maskrcnn_example_output.txt).
 
-### Resnet-18
+### Resnet-18 Inference and Training
 
 #### Setup
 
 First [install Torchvision and Lazy Tensor Core](#install-torchvision-and-lazy-tensor-core).
+
+#### Additional steps for Inference
 
 Install the following Python packages:
 
@@ -87,7 +89,26 @@ Install the following Python packages:
 python -m pip install pillow request
 ```
 
-#### Running Example
+#### Additional steps for Training
+
+Install the library `libsndfile`. On Ubuntu, simply run
+
+```shell
+sudo apt-get install libsndfile-dev
+```
+
+Install the PyTorch benchmarks using my fork, which includes some changes to make the benchmark run on LTC:
+
+```shell
+git clone https://github.com/ramiro050/benchmark.git
+cd benchmark
+git checkout lazytensor_support
+```
+
+Then follow [these](https://github.com/ramiro050/benchmark#building-from-source) instructions to install the benchmark.
+
+
+#### Running Inference Example
 
 From inside the `lazy-tensor-samples` directory, run:
 
@@ -96,3 +117,11 @@ python lazytensor_resnet18_example.py
 ```
 
 The output of this example can be found in [lazytensor_resnet18_example_output.txt](https://github.com/ramiro050/lazy-tensor-samples/blob/main/lazytensor_resnet18_example_output.txt).
+
+#### Running Training Example
+
+From inside the [benchmark](https://github.com/ramiro050/benchmark) directory, run:
+
+```shell
+python run.py resnet18 -d lazy -t train
+```
